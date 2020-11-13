@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Split Calculator App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container"> <h1>Tip Calculator</h1> 
+    <label for="subtotal">What's the bill total?</label>
+    <br> 
+
+    <input type="number" id="totalInput" min="0"  step="0.01" placeholder="$0.00"> <br>
+    <label for="tipRange">Quality of your service? <br>
+        <select id="tipRange">
+            <option disabled selected value="0">Choose an option</option>
+            <option value=".05">5% -- Horrible!</option>
+            <option value=".10">10% -- Disappointing :( </option>
+            <option value=".12">12% -- Not Good!</option>
+            <option value=".15">15% -- It Was Alright</option>
+            <option value=".18">18% -- Very Good!</option>
+            <option value=".20">20% -- Great!</option>
+            <option value=".25">25% -- Amazing!</option>
+        </select>
+    </label>
+    <br>
+    
+    Splitting the bill? <br>
+    <input type="number" id= "splitBillInput" min="1" placeholder="with how many people?">
+    <br>
+    <button type="submit" id="submit">Calculate!</button>
+    <!-- Display Total Amount Per Person -->
+    <div id="tipAmountDisplay">
+        Tip Amount <br>
+        <span id= "totalTip"></span>
+        <br>
+        
+        <span id="each"></span> Each
+        
+    </div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
